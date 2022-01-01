@@ -1,0 +1,23 @@
+{
+  "name": "off-canva-menu",
+  "version": "1.0.0",
+  "main": "js/index.js",
+  "author": "Martin Heywang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm:watch-sass\" \"npm:watch-ts\" \"npm:serve\" --kill-others",
+    "watch-all": "concurrently \"npm:watch-sass\" \"npm:watch-ts\" --kill-others",
+    "watch-sass": "sass --watch scss:css",
+    "watch-ts": "tsc --watch",
+    "compile-all": "concurrently \"npm:compile-sass\" \"npm:compile-ts\"",
+    "compile-sass": "sass scss:css",
+    "compile-ts": "tsc",
+    "serve": "live-server"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.32.8",
+    "typescript": "^4.2.3"
+  }
+}
